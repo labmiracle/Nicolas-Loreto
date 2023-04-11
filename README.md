@@ -1,5 +1,5 @@
 ## Breve presentación
 
-Repositorio de Nicolás Loreto
+Mi nombre es Nicolás Loreto. Soy desarrollador frontend y músico compositor. Me interesa aprender continuamente y trabajar en equipo.
 
-Hora actual: 14:36 hs.
+14:26 hs.

@@ -9,9 +9,7 @@ function adivinarNum(n){
     let aleatorio = random * 10
     
     let entero = Math.ceil(aleatorio)
-    
-    console.log(entero)
-  
+     
         switch(true){
             case entero < n:
                 return 'El número es menor';
@@ -23,4 +21,6 @@ function adivinarNum(n){
 }
 
 console.log(adivinarNum(5))
+
+
 

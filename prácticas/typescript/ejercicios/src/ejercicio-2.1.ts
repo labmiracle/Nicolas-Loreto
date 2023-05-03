@@ -12,4 +12,5 @@ value;
  doStuff('hello');
  doStuff(true);
  doStuff({});7
+ 
  console.log('[Ejercicio 4.1]');

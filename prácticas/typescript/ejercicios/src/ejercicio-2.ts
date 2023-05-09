@@ -1,4 +1,4 @@
-// Code Breaker. El juego comienza generando un número
+// Code Breaker
 
 function game(): string{
 

@@ -4,7 +4,7 @@ function computeScore(word: string): number {
 }
 
 function getPointsFor(letter: string): number {
-    const lettersAndPoints:  (string | number)[][] = [
+    const lettersAndPoints: (string | number)[][] = [
         ['AEOIULNRST', 1],
         ['DG', 2],
         ['BCMP', 3],
@@ -21,6 +21,6 @@ function getPointsFor(letter: string): number {
         }
         return accum;
     }, 0);
- }
+}
 
- console.log('[Ejercicio 3.3]', `zoologico vale ${computeScore('zoo')} puntos.`);
+console.log('[Ejercicio 3.3]', `zoologico vale ${computeScore('zoo')} puntos.`);

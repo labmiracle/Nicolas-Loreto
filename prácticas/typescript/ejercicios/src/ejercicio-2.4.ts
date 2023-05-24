@@ -7,17 +7,17 @@ interface Flyer {
 }
 interface Swimmer {
     swim(depth: number): void;
- }
+}
 
- // agregar alias de tipo(s) aqui
+// agregar alias de tipo(s) aqui
 
- type BirdLike = Flyer
+type BirdLike = Flyer;
 
- type FishLike = Swimmer
+type FishLike = Swimmer;
 
- type Animal = Bird | Fish
+type Animal = Bird | Fish;
 
- class Bird implements BirdLike {
+class Bird implements BirdLike {
 
     constructor(public species: string) { }
 
@@ -28,9 +28,9 @@ interface Swimmer {
     fly(height: number): void {
         console.log(`Volando a la altura de ${height} metros.`);
     }
- }
+}
 
- class Fish implements FishLike {
+class Fish implements FishLike {
     constructor(public species: string) { }
 
     layEggs(): void {
@@ -40,30 +40,30 @@ interface Swimmer {
     swim(depth: number): void {
         console.log(`Nadando a una profundidad de ${depth} metros.`);
     }
- }
+}
 
- function getRandomAnimal() {
+function getRandomAnimal() {
     const animals = [
-    new Bird('puffin'),
-    new Bird('kittiwake'),
-    new Fish('sea robin'),
-    new Fish('leafy seadragon'),
- ];
+        new Bird('puffin'),
+        new Bird('kittiwake'),
+        new Fish('sea robin'),
+        new Fish('leafy seadragon'),
+    ];
 
- return animals[Math.floor(Math.random() * animals.length)];
- }
+    return animals[Math.floor(Math.random() * animals.length)];
+}
 
- function interrogateAnimal(animal = getRandomAnimal()) {
-    if(animal instanceof Fish){
-        animal.swim(10) // se llama solo si es un pez
-        animal.layEggs()
-    }else if(animal instanceof Bird){
+function interrogateAnimal(animal = getRandomAnimal()) {
+    if (animal instanceof Fish) {
+        animal.swim(10); // se llama solo si es un pez
+        animal.layEggs();
+    } else if (animal instanceof Bird) {
         animal.fly(10); // se llama solo si es un pajaro
-        animal.layEggs()
+        animal.layEggs();
     }
-   
- return animal.species;
- }
 
- console.log('[Ejercicio 4.4]',
- `Tenemos un ${interrogateAnimal()} en nuestras manos!`);
+    return animal.species;
+}
+
+console.log('[Ejercicio 4.4]',
+    `Tenemos un ${interrogateAnimal()} en nuestras manos!`);

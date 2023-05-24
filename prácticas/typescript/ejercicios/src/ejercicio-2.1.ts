@@ -4,13 +4,13 @@ function doStuff(value: any): void {
     } else if (typeof value === 'number') {
         console.log(value.toPrecision(5));
     }
-value; 
+    value;
 }
- doStuff(2);
- doStuff(22);
- doStuff(222);
- doStuff('hello');
- doStuff(true);
- doStuff({});7
- 
- console.log('[Ejercicio 4.1]');
+doStuff(2);
+doStuff(22);
+doStuff(222);
+doStuff('hello');
+doStuff(true);
+doStuff({}); 7;
+
+console.log('[Ejercicio 4.1]');

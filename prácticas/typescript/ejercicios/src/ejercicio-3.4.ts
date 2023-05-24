@@ -1,6 +1,6 @@
 function greet(greeting?: string): string {
-    if(typeof greeting === 'undefined'){
-        return 'hola'
+    if (typeof greeting === 'undefined') {
+        return 'hola';
     }
     return greeting.toUpperCase();
 }

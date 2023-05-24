@@ -1,23 +1,23 @@
-function sum(...argumentos){
+function sum (...argumentos) {
 
     let total = 0;
 
-    for(elemento of argumentos){
+    for (elemento of argumentos) {
 
-        if(typeof elemento != 'number'){
+        if (typeof elemento != 'number') {
 
             return 'Los argumentos deben ser números';
 
-        }else{
+        } else {
 
             total += elemento;
 
         };
-      
+
     }
 
-    return total
+    return total;
 
 }
 
-console.log(sum(1,7,2))
+console.log(sum(1, 7, 2));

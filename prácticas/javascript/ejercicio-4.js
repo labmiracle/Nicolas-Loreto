@@ -1,45 +1,45 @@
-function palabraMasLarga(str) {
+function palabraMasLarga (str) {
 
-    if(typeof str != 'string'){
+    if (typeof str != 'string') {
 
-        return 'Solo se permiten palabras'
+        return 'Solo se permiten palabras';
 
     };
 
     let arr = str.split(' ');
-    
+
     let palabraMayor = '';
 
-    for(palabra of arr){
+    for (palabra of arr) {
 
-        palabraMayor.length > palabra.length ?  palabraMayor:  palabraMayor = palabra
+        palabraMayor.length > palabra.length ? palabraMayor : palabraMayor = palabra;
 
     };
 
     return palabraMayor;
 
-  }
-  
-  console.assert(palabraMasLarga('Erase una vez que se era') === 'Erase');
+}
+
+console.assert(palabraMasLarga('Erase una vez que se era') === 'Erase');
 
 // 
 
-function primeraMayuscula(str) {
+function primeraMayuscula (str) {
 
-    if(typeof str != 'string'){
+    if (typeof str != 'string') {
 
-        return 'Solo se permiten palabras'
+        return 'Solo se permiten palabras';
 
     };
 
-     let arr = str.split(' ');
-     let string = [];
+    let arr = str.split(' ');
+    let string = [];
 
-     for( palabra of arr){
+    for (palabra of arr) {
 
-       string.push(palabra.charAt(0).toUpperCase() + palabra.slice(1))
-       
-     };
+        string.push(palabra.charAt(0).toUpperCase() + palabra.slice(1));
+
+    };
 
     return string.join(' ');
 }

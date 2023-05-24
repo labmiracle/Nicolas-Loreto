@@ -1,8 +1,8 @@
-function camelize(str) {
+function camelize (str) {
 
-    if(typeof str != 'string'){
+    if (typeof str != 'string') {
 
-        return 'No es una cadena de caracteres'
+        return 'No es una cadena de caracteres';
 
     };
 
@@ -10,9 +10,9 @@ function camelize(str) {
 
     let aMayuscula = [];
 
-    for (palabra of arr){
+    for (palabra of arr) {
 
-        aMayuscula.push(palabra.charAt(0).toUpperCase() + palabra.slice(1))
+        aMayuscula.push(palabra.charAt(0).toUpperCase() + palabra.slice(1));
 
     };
 

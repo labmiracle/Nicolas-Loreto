@@ -13,20 +13,20 @@ const carrito = {
         }
     ],
 
-    get precioTotal() {
+    get precioTotal () {
 
         let total = 0;
 
-        for (producto of this.productos){
+        for (producto of this.productos) {
 
-            total += producto.precio
+            total += producto.precio;
 
         };
 
         return total;
     }
-    
-}
+
+};
 
 console.log(carrito.precioTotal);
 

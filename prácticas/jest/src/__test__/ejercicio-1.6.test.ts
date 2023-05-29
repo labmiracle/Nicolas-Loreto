@@ -5,6 +5,7 @@ describe('find num max repeated', () => {
         expect(findMaxRepeat([1, 3, 4, 2])).toBe(-1);
         expect(findMaxRepeat([1, '2', 1, 1])).toBe(-1);
         expect(findMaxRepeat([1, 3, 4, 'hello'])).toBe(-1);
+        expect(findMaxRepeat([1, 1, 0, 'hello'])).toBe(-1);
         expect(findMaxRepeat(['a', 'b', 'c', 'd'])).toBe(-1);
         expect(findMaxRepeat([1, 1.5, 1, 1.5])).toBe(-1);
         expect(findMaxRepeat([1, '0.5', 1, 1.5])).toBe(-1);

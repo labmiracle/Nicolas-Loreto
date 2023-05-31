@@ -1,0 +1,16 @@
+header {
+  margin: 100%;
+}
+header .ul {
+  align-items: center;
+}
+header .ul .li {
+  align-items: start;
+}
+header .menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*# sourceMappingURL=nesting.css.map */

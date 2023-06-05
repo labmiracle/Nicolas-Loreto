@@ -1,13 +1,14 @@
+@use "variables" as variables;
 @use "herencia";
 
-.button {
-  width: 2rem;
-  @extend .button;
+body {
+  background-color: variables.$primary-color;
 }
 
-.menu {
-  position: fixed;
-  top: 0;
-  right: 0;
-  @extend .menu;
+.main {
+  color: variables.$color-primary;
+}
+
+.buttons {
+  @extend .button !optional;
 }

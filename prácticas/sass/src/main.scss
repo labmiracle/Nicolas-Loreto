@@ -1,0 +1,13 @@
+@use "herencia";
+
+.button {
+  width: 2rem;
+  @extend .button;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  @extend .menu;
+}

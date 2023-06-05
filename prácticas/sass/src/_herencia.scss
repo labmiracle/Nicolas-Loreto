@@ -7,13 +7,13 @@
 }
 
 .button-danger {
-  @extend .buton;
+  @extend .button;
   background-color: red;
   color: aliceblue;
 }
 
 .button-succes {
-  @extend .buton;
+  @extend .button;
   background-color: plum;
   color: black;
 }

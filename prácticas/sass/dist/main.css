@@ -1,0 +1,48 @@
+.button, .buttons, .button-succes, .button-danger {
+  width: 4rem;
+  min-height: 4rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.button-danger {
+  background-color: red;
+  color: aliceblue;
+}
+
+.button-succes {
+  background-color: plum;
+  color: black;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.subtitle {
+  font-size: 2.25rem;
+}
+
+.p {
+  font-size: 1.5rem;
+}
+
+.footer {
+  font-size: 0.75rem;
+}
+
+body {
+  background-color: gray;
+}
+
+.main {
+  color: blue;
+  background-color: white;
+}
+
+.footer {
+  font-size: 0.75rem;
+}
+
+/*# sourceMappingURL=main.css.map */

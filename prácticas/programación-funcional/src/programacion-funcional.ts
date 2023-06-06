@@ -1,3 +1,11 @@
+interface Person {
+  name: string;
+  height: string;
+  mass: string;
+  eye_color: string;
+  gender: string;
+}
+
 const characters = [
   {
     name: "Luke Skywalker",
@@ -29,13 +37,7 @@ const characters = [
   },
 ];
 
-interface Person {
-  name: string;
-  height: string;
-  mass: string;
-  eye_color: string;
-  gender: string;
-}
+// map()
 
 function getName(arr: Person[]): {} {
   const map = arr.map((n) => n.name);
@@ -62,3 +64,17 @@ function getNameAndHeight(arr: Person[]) {
 getName(characters);
 getHeight(characters);
 getNameAndHeight(characters);
+
+// filter()
+
+function filterMass(arr: Person[]) {
+  const filteredMass = arr.filter((m) => {
+    if (typeof m.mass !== "number") {
+      const massToNum = parseInt(m.mass);
+      return massToNum > 100;
+    }
+  });
+  return filteredMass;
+}
+
+filterMass(characters);

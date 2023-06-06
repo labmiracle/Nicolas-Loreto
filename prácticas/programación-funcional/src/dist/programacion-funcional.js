@@ -29,6 +29,7 @@ const characters = [
         gender: "male",
     },
 ];
+// map()
 function getName(arr) {
     const map = arr.map((n) => n.name);
     return map;
@@ -49,3 +50,14 @@ function getNameAndHeight(arr) {
 getName(characters);
 getHeight(characters);
 getNameAndHeight(characters);
+// filter()
+function filterMass(arr) {
+    const filteredMass = arr.filter((m) => {
+        if (typeof m.mass !== "number") {
+            const massToNum = parseInt(m.mass);
+            return massToNum > 100;
+        }
+    });
+    return filteredMass;
+}
+filterMass(characters);

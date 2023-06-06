@@ -1,6 +1,23 @@
-@mixin img() {
-  width: 4rem;
-  min-height: 7rem;
-  background-color: none;
-  border: 1px solid orange;
+@import "variables";
+
+@mixin img($widht, $border) {
+  width: $widht;
+  border: $border;
+}
+
+@mixin circle($widht, $border-radius) {
+  width: $widht;
+  height: $widht;
+  @if $border-radius < 50% {
+    border-radius: 50%;
+  }
+}
+
+@mixin warn($color) {
+  @if ($color != $background-color) {
+    @warn "No esás usando el color primario";
+    background-color: $color;
+  } @else {
+    background-color: $background-color;
+  }
 }

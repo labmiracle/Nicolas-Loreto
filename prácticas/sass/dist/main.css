@@ -1,9 +1,12 @@
-.button, .buttons, .button-succes, .button-danger {
+.button, .button-succes, .button-danger {
+  display: flex;
   width: 4rem;
-  min-height: 4rem;
   border-radius: 0.5rem;
   padding: 1rem;
   margin: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .button-danger {
@@ -33,12 +36,18 @@
 }
 
 body {
-  background-color: gray;
+  background-color: white;
 }
 
 .main {
-  color: blue;
-  background-color: white;
+  background-color: orange;
+}
+
+.buttons-circle {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  background-color: green;
 }
 
 .footer {

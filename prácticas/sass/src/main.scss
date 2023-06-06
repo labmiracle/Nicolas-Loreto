@@ -1,18 +1,19 @@
 @use "variables" as variables;
 @use "herencia";
 @use "operadores" as operadores;
+@use "mixins";
 
 body {
-  background-color: variables.$primary-color;
-}
-
-.main {
-  color: variables.$color-primary;
   background-color: variables.$background-color;
 }
 
-.buttons {
-  @extend .button;
+.main {
+  @include mixins.warn(orange);
+}
+
+.buttons-circle {
+  @include mixins.circle(9rem, 34%);
+  background-color: green;
 }
 
 .footer {

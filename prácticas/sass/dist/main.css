@@ -60,14 +60,26 @@ header .nav {
   font-size: 3rem;
 }
 
+.color-purple {
+  background-color: white;
+}
+
 .color-magenta {
   color: magenta;
   font-size: 3rem;
 }
 
+.color-magenta {
+  background-color: gray;
+}
+
 .color-violet {
   color: violet;
   font-size: 3rem;
+}
+
+.color-violet {
+  background-color: black;
 }
 
 .color-4 {

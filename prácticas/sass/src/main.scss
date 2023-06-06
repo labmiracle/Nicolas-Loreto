@@ -9,6 +9,8 @@
     color: $c;
     font-size: 3rem;
   }
+
+  @include mixins.background-colors($c);
 }
 
 body {

@@ -21,3 +21,21 @@
     background-color: $background-color;
   }
 }
+
+@mixin background-colors($color) {
+  @if ($color == violet) {
+    .color-#{$color} {
+      background-color: black;
+    }
+  }
+  @if ($color == magenta) {
+    .color-#{$color} {
+      background-color: gray;
+    }
+  }
+  @if ($color == purple) {
+    .color-#{$color} {
+      background-color: white;
+    }
+  }
+}

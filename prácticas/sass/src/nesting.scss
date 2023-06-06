@@ -1,6 +1,9 @@
 header {
+  display: flex;
   width: 100%;
-  background: grey;
+  font-size: 2rem;
+  border: 1px solid black;
+  justify-content: center;
   .ul {
     align-items: center;
     .li {
@@ -8,7 +11,8 @@ header {
     }
   }
 
-  .menu {
+  .nav {
+    background-color: khaki;
     position: absolute;
     top: 0;
     right: 0;

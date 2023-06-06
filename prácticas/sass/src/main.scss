@@ -1,7 +1,15 @@
 @use "variables" as variables;
-@use "herencia";
 @use "operadores" as operadores;
 @use "mixins";
+@use "herencia";
+@use "nesting";
+
+@each $c in variables.$purp {
+  .color-#{$c} {
+    color: $c;
+    font-size: 3rem;
+  }
+}
 
 body {
   background-color: variables.$background-color;
@@ -9,6 +17,20 @@ body {
 
 .main {
   @include mixins.warn(orange);
+}
+
+.container {
+  display: variables.$display-container;
+}
+
+.right {
+  display: variables.$display-container;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  align-items: end;
+  margin-left: 4rem;
+  text-align: end;
 }
 
 .buttons-circle {

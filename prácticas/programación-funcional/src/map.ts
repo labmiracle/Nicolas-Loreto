@@ -40,9 +40,16 @@ const characters = [
     
     function getName(arr: Person[]): {}{
     
-        const map = arr.map(o => o.name)
+        const map = arr.map(n => n.name)
     
         return map
+    }
+
+    function getHeight(arr: Person[]){
+
+        const map = arr.map(h => h.height)
+        return map
+
     }
     
 

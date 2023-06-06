@@ -30,7 +30,11 @@ const characters = [
     }
 ];
 function getName(arr) {
-    const map = arr.map(o => o.name);
+    const map = arr.map(n => n.name);
+    return map;
+}
+function getHeight(arr) {
+    const map = arr.map(h => h.height);
     return map;
 }
 getName(characters);

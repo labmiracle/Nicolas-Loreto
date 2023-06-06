@@ -1,0 +1,16 @@
+{
+  "name": "programacion-funcional",
+  "version": "1.0.0",
+  "description": "Prácticas - programacón funcional",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicolás Loreto",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.42.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.3"
+  }
+}

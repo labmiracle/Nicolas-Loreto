@@ -134,3 +134,12 @@ function sortByMass(arr: Person[]) {
 }
 
 sortByMass(characters);
+
+function sortByHeight(arr: Person[]) {
+  const sortedByHeight = arr.sort(function (a, b) {
+    return parseInt(a.height) - parseInt(b.height);
+  });
+  return sortedByHeight;
+}
+
+sortByHeight(characters);

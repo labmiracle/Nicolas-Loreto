@@ -108,3 +108,10 @@ function sortByMass(arr) {
     return sortedByMass;
 }
 sortByMass(characters);
+function sortByHeight(arr) {
+    const sortedByHeight = arr.sort(function (a, b) {
+        return parseInt(a.height) - parseInt(b.height);
+    });
+    return sortedByHeight;
+}
+sortByHeight(characters);

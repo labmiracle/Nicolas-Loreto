@@ -143,3 +143,18 @@ function sortByHeight(arr: Person[]) {
 }
 
 sortByHeight(characters);
+
+function sortByGender(arr: Person[]) {
+  const sortedByGender = arr.sort(function (a, b) {
+    if (a.gender < b.gender) {
+      return -1;
+    } else if (a.gender > b.gender) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+  return sortedByGender;
+}
+
+sortByGender(characters);

@@ -174,3 +174,9 @@ function someHeightGreaterThan200(arr) {
     });
     return someGreaterThan200;
 }
+function someMassMinorThan50(arr) {
+    const someMinorThan50 = arr.some((e) => {
+        return parseInt(e.mass) < 50;
+    });
+    return someMinorThan50;
+}

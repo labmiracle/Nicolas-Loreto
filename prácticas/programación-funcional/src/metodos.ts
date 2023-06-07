@@ -168,3 +168,11 @@ function everyBlueEyes(arr: Person[]) {
 
   return everyAreBlueEyes;
 }
+
+function everyMassGreaterThan40(arr: Person[]) {
+  const everyAreGreaterThan40 = arr.every((e) => {
+    return parseInt(e.mass) > 40;
+  });
+
+  return everyAreGreaterThan40;
+}

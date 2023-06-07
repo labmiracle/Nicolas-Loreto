@@ -137,3 +137,9 @@ function everyBlueEyes(arr) {
     });
     return everyAreBlueEyes;
 }
+function everyMassGreaterThan40(arr) {
+    const everyAreGreaterThan40 = arr.every((e) => {
+        return parseInt(e.mass) > 40;
+    });
+    return everyAreGreaterThan40;
+}

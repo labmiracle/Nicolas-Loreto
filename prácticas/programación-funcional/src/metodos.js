@@ -155,9 +155,17 @@ function everyMale(arr) {
     });
     return everyAreMale;
 }
+// some()
 function someMale(arr) {
     const isThereSomeMale = arr.some((e) => {
         return e.gender === "male";
     });
     return isThereSomeMale;
+}
+// 2. ¿Hay al menos un personaje con ojos azules?
+function someBlueEyes(arr) {
+    const isThereSomeBlueEyes = arr.some((e) => {
+        return e.eye_color === "blue";
+    });
+    return isThereSomeBlueEyes;
 }

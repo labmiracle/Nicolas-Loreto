@@ -193,9 +193,20 @@ function everyMale(arr: Person[]) {
   return everyAreMale;
 }
 
+// some()
+
 function someMale(arr: Person[]) {
   const isThereSomeMale = arr.some((e) => {
     return e.gender === "male";
   });
   return isThereSomeMale;
+}
+
+// 2. ¿Hay al menos un personaje con ojos azules?
+
+function someBlueEyes(arr: Person[]) {
+  const isThereSomeBlueEyes = arr.some((e) => {
+    return e.eye_color === "blue";
+  });
+  return isThereSomeBlueEyes;
 }

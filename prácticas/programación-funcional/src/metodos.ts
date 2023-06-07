@@ -202,8 +202,6 @@ function someMale(arr: Person[]) {
   return isThereSomeMale;
 }
 
-// 2. ¿Hay al menos un personaje con ojos azules?
-
 function someBlueEyes(arr: Person[]) {
   const isThereSomeBlueEyes = arr.some((e) => {
     return e.eye_color === "blue";

@@ -130,3 +130,10 @@ function sortByGender(arr) {
     return sortedByGender;
 }
 sortByGender(characters);
+// every()
+function everyBlueEyes(arr) {
+    const everyAreBlueEyes = arr.every((e) => {
+        return e.eye_color === "blue";
+    });
+    return everyAreBlueEyes;
+}

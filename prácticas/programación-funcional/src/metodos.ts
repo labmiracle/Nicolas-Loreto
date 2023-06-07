@@ -158,3 +158,13 @@ function sortByGender(arr: Person[]) {
 }
 
 sortByGender(characters);
+
+// every()
+
+function everyBlueEyes(arr: Person[]) {
+  const everyAreBlueEyes = arr.every((e) => {
+    return e.eye_color === "blue";
+  });
+
+  return everyAreBlueEyes;
+}

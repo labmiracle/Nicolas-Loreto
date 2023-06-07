@@ -176,3 +176,11 @@ function everyMassGreaterThan40(arr: Person[]) {
 
   return everyAreGreaterThan40;
 }
+
+function everyHeightMinorThan200(arr: Person[]) {
+  const everyAreMinorThan200 = arr.every((e) => {
+    return parseInt(e.height) > 200;
+  });
+
+  return everyAreMinorThan200;
+}

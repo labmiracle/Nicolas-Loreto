@@ -143,3 +143,9 @@ function everyMassGreaterThan40(arr) {
     });
     return everyAreGreaterThan40;
 }
+function everyHeightMinorThan200(arr) {
+    const everyAreMinorThan200 = arr.every((e) => {
+        return parseInt(e.height) > 200;
+    });
+    return everyAreMinorThan200;
+}

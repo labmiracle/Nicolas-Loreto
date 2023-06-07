@@ -125,3 +125,12 @@ function sortByName(arr: Person[]) {
 }
 
 sortByName(characters);
+
+function sortByMass(arr: Person[]) {
+  const sortedByMass = arr.sort(function (a, b) {
+    return parseInt(a.mass) - parseInt(b.mass);
+  });
+  return sortedByMass;
+}
+
+sortByMass(characters);

@@ -162,10 +162,15 @@ function someMale(arr) {
     });
     return isThereSomeMale;
 }
-// 2. ¿Hay al menos un personaje con ojos azules?
 function someBlueEyes(arr) {
     const isThereSomeBlueEyes = arr.some((e) => {
         return e.eye_color === "blue";
     });
     return isThereSomeBlueEyes;
+}
+function someHeightGreaterThan200(arr) {
+    const someGreaterThan200 = arr.some((e) => {
+        return parseInt(e.height) > 200;
+    });
+    return someGreaterThan200;
 }

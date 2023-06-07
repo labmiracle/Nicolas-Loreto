@@ -208,3 +208,11 @@ function someBlueEyes(arr: Person[]) {
   });
   return isThereSomeBlueEyes;
 }
+
+function someHeightGreaterThan200(arr: Person[]) {
+  const someGreaterThan200 = arr.some((e) => {
+    return parseInt(e.height) > 200;
+  });
+
+  return someGreaterThan200;
+}

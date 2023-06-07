@@ -192,3 +192,10 @@ function everyMale(arr: Person[]) {
 
   return everyAreMale;
 }
+
+function someMale(arr: Person[]) {
+  const isThereSomeMale = arr.some((e) => {
+    return e.gender === "male";
+  });
+  return isThereSomeMale;
+}

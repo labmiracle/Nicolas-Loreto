@@ -155,3 +155,9 @@ function everyMale(arr) {
     });
     return everyAreMale;
 }
+function someMale(arr) {
+    const isThereSomeMale = arr.some((e) => {
+        return e.gender === "male";
+    });
+    return isThereSomeMale;
+}

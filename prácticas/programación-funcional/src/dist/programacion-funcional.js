@@ -71,7 +71,6 @@ function filterHeightMinorThan200(arr) {
     return filteredHeight;
 }
 filterHeightMinorThan200(characters);
-//Obtener todos los personajes masculinos
 function filterByMale(arr) {
     const filterMale = arr.filter((g) => {
         return g.gender === "male";
@@ -79,3 +78,10 @@ function filterByMale(arr) {
     return filterMale;
 }
 filterByMale(characters);
+function filterByFemale(arr) {
+    const filterFemale = arr.filter((g) => {
+        return g.gender === "female";
+    });
+    return filterFemale;
+}
+filterByFemale(characters);

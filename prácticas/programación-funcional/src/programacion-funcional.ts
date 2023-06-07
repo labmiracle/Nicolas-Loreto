@@ -67,7 +67,7 @@ getNameAndHeight(characters);
 
 // filter()
 
-function filterMass(arr: Person[]) {
+function filterMassMinorThan100(arr: Person[]) {
   const filteredMass = arr.filter((m) => {
     if (typeof m.mass !== "number") {
       const massToNum = parseInt(m.mass);
@@ -77,4 +77,4 @@ function filterMass(arr: Person[]) {
   return filteredMass;
 }
 
-filterMass(characters);
+filterMassMinorThan100(characters);

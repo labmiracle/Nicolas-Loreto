@@ -38,3 +38,15 @@ const users = [
         role: "Instructor"
     },
 ];
+// 1. Mapealo a un arreglo de strings: firstName-lastName: role
+function map(arr) {
+    const maped = arr.map(e => {
+        return `${e.firstName}-${e.lastName}: ${e.role}`;
+    });
+    return maped;
+}
+;
+// 2. Filtra aquellos usuarios con role de Full Stack Resident
+// 3. Reduce el arreglo a un objeto en el que cada propiedad es un role y su valor un arreglo
+// con los objetos usuarios que tienen dicho role
+// 4. Genera una función de búsqueda de un usuario por firstName con find

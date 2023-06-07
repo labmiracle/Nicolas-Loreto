@@ -85,3 +85,19 @@ function filterByFemale(arr) {
     return filterFemale;
 }
 filterByFemale(characters);
+// sort
+function sortByName(arr) {
+    const sortedByName = arr.sort(function (a, b) {
+        if (a.name < b.name) {
+            return -1;
+        }
+        else if (a.name > b.name) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    });
+    return sortedByName;
+}
+sortByName(characters);

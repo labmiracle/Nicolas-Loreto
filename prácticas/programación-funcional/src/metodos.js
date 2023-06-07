@@ -149,3 +149,9 @@ function everyHeightMinorThan200(arr) {
     });
     return everyAreMinorThan200;
 }
+function everyMale(arr) {
+    const everyAreMale = arr.every((e) => {
+        return e.gender === "male";
+    });
+    return everyAreMale;
+}

@@ -184,3 +184,11 @@ function everyHeightMinorThan200(arr: Person[]) {
 
   return everyAreMinorThan200;
 }
+
+function everyMale(arr: Person[]) {
+  const everyAreMale = arr.every((e) => {
+    return e.gender === "male";
+  });
+
+  return everyAreMale;
+}

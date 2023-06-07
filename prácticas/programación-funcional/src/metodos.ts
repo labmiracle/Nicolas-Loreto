@@ -193,18 +193,9 @@ function everyMale(arr: Person[]) {
   return everyAreMale;
 }
 
-// some()
-
 function someMale(arr: Person[]) {
   const isThereSomeMale = arr.some((e) => {
     return e.gender === "male";
   });
   return isThereSomeMale;
-}
-
-function someBlueEyes(arr: Person[]) {
-  const isThereSomeBlueEyes = arr.some((e) => {
-    return e.eye_color === "blue";
-  });
-  return isThereSomeBlueEyes;
 }

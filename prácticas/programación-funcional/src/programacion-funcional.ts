@@ -78,3 +78,15 @@ function filterMassGreaterThan100(arr: Person[]) {
 }
 
 filterMassGreaterThan100(characters);
+
+function filterHeightMinorThan200(arr: Person[]) {
+  const filteredHeight = arr.filter((h) => {
+    if (typeof h.height !== "number") {
+      const heightToNum = parseInt(h.height);
+      return heightToNum < 200;
+    }
+  });
+  return filteredHeight;
+}
+
+filterHeightMinorThan200(characters);

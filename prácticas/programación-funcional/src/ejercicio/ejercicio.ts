@@ -1,6 +1,3 @@
-// Ejercicio
-// Dado el siguiente arreglo:
-
 interface User
 {
     firstName: string,
@@ -71,6 +68,20 @@ function filter ( arr: User[] )
 
 }
 
+filter( users );
+
 // 3. Reduce el arreglo a un objeto en el que cada propiedad es un role y su valor un arreglo
 // con los objetos usuarios que tienen dicho role
+
 // 4. Genera una función de búsqueda de un usuario por firstName con find
+
+function find ( arr: User[] )
+{
+    const finded = arr.find( e =>
+    {
+        return e.firstName === 'Zach';
+    } );
+
+    return finded;
+}
+find( users );

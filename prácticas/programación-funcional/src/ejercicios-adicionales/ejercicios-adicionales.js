@@ -47,6 +47,13 @@ function filterSimulador(arr) {
     return filtered;
 }
 // 4. Implemente su propia función reduce
+function reduceSimulador(arr) {
+    const reduced = arr.reduce((obj, e) => {
+        obj[e.alter_ego] = e.name + ' ' + e.lastname;
+        return obj;
+    }, {});
+    return reduced;
+}
 // 5. Queremos escribir cálculos usando funciones y obtener los resultados. Requerimientos:
 // • Debe haber una función para cada número del 0 (”cero”) al 9 (”nueve”)
 // • Debe haber una función para cada una de las siguientes operaciones matemáticas:

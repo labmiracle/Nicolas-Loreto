@@ -40,6 +40,12 @@ function findSimulador(arr) {
     return finded;
 }
 // 3. Implemente su propia función filter
+function filterSimulador(arr) {
+    const filtered = arr.filter(e => {
+        return e.name.includes('i');
+    });
+    return filtered;
+}
 // 4. Implemente su propia función reduce
 // 5. Queremos escribir cálculos usando funciones y obtener los resultados. Requerimientos:
 // • Debe haber una función para cada número del 0 (”cero”) al 9 (”nueve”)

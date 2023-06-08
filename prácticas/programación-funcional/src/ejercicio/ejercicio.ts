@@ -73,6 +73,28 @@ filter( users );
 // 3. Reduce el arreglo a un objeto en el que cada propiedad es un role y su valor un arreglo
 // con los objetos usuarios que tienen dicho role
 
+
+function reduce ( arr: User[] )
+{
+
+    const reduced = arr.reduce( ( obj: Record<string, User[]>, e ) =>
+    {
+        if ( !obj[ e.role ] )
+        {
+            obj[ e.role ] = [];
+        }
+        obj[ e.role ].push( e );
+
+        return obj;
+
+    }, {} );
+
+    return reduced;
+}
+
+reduce( users );
+
+
 // 4. Genera una función de búsqueda de un usuario por firstName con find
 
 function find ( arr: User[] )

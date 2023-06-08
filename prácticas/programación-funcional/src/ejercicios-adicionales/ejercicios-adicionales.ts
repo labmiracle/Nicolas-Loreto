@@ -46,8 +46,16 @@ function mapSimulador ( arr: Simulador[] )
     return maped;
 }
 
-
 // 2. Implemente su propia función find
+
+function findSimulador ( arr: Simulador[] )
+{
+    const finded = arr.find( e =>
+    {
+        return e.lastname === 'Lamponne';
+    } );
+    return finded;
+}
 // 3. Implemente su propia función filter
 // 4. Implemente su propia función reduce
 // 5. Queremos escribir cálculos usando funciones y obtener los resultados. Requerimientos:

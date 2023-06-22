@@ -5,8 +5,6 @@ export function StringComponent ()
 
     const [ string, setString ] = useState<string[]>( [] );
 
-    const random: number = Math.floor( ( Math.random() * 9 ) );
-
     const arr = [ 'M', 'i', 'r', 'a', 'c', 'l', 'e', '_', 'L', 'a', 'b' ];
 
     return <>

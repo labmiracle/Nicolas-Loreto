@@ -7,13 +7,13 @@ export function StringComponent ()
 
     const random: number = Math.floor( ( Math.random() * 9 ) );
 
-    const arr = [ 'a', 'b', 'c', 'd', 'f', 'g', 'h', 'i', 'j' ];
+    const arr = [ 'M', 'i', 'r', 'a', 'c', 'l', 'e', '_', 'L', 'a', 'b' ];
 
     return <>
 
         <h1>String { string }</h1>
 
-        <button onClick={ () => setString( [ ...string, arr[ random ] ] ) }>
+        <button onClick={ () => setString( [ ...string, arr[ string.length++ ] ] ) }>
 
             + string
         </button>

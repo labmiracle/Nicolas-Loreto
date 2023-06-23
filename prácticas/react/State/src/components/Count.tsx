@@ -1,23 +1,12 @@
-import { useState } from "react";
+import { ButtonsCountComponent } from "./Buttons-count";
 
 export function CountComponent ()
 {
+    return (
+        <>
 
-    const [ count, setCount ] = useState( 0 );
+            <ButtonsCountComponent />
 
-    return <>
-
-        <h1>
-            Count { count }
-        </h1>
-
-        <button onClick={ () => setCount( count + 1 ) } >
-            +1
-        </button>
-
-        <button onClick={ () => setCount( count - 1 ) } >
-            -1
-        </button>
-
-    </>;
+        </>
+    );
 }

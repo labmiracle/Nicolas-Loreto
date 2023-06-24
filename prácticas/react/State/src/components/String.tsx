@@ -1,4 +1,4 @@
-import { ButtonsStringsComponent } from "./Buttons-strings";
+import { ButtonsStringsComponent } from "./ButtonStrings";
 
 
 export function StringComponent ()

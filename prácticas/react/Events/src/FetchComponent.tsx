@@ -3,23 +3,32 @@ export const FetchComponent = () =>
 
     const url = 'https://jsonplaceholder.typicode.com/todos/1';
 
-    const petition = () =>
+    const petition = async () =>
     {
+        try
+        {
 
-        const http = fetch( url );
+            const resp = await fetch( url );
 
-        http.then( ( resp ) => resp.json()
-            .then( ( resp ) =>
-            {
-                const element = document.createElement( 'code' );
-                document.body.append( element.textContent = JSON.stringify( resp ) );
-            } ) );
+            const json = await resp.json();
 
+            const data = JSON.stringify( json );
 
+            const element = document.createElement( 'code' );
+
+            document.body.append( element.textContent = data );
+
+        }
+        catch {
+
+            const err = document.createElement( 'div' );
+
+            document.body.append(
+                err.textContent = 'Ha habido un error'
+            );
+            throw Error( `Ocurrió un error en la petición` );
+        }
     };
-
-
-
 
     return (
         <>

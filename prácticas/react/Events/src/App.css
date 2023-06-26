@@ -48,8 +48,25 @@ body{
   justify-content: center;
 }
 
+.petition, .input, .select{
+  border-bottom: 1px solid black;
+  margin: 2rem;
+  padding: 2rem;
+}
 code{
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+}
+
+.selectElement{
+
+  padding: .5rem;
+  margin: 2rem;
+  font-size: 1rem;
+}
+
+.selectedValue{
+  
+  font-size: 2rem;
 }

@@ -31,11 +31,11 @@ export const FetchComponent = () =>
     };
 
     return (
-        <>
+        <div className="petition">
             <button onClick={ petition }>Petición</button>
             <code id="resp">
 
             </code>
-        </>
+        </div>
     );
 };

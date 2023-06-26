@@ -8,12 +8,12 @@ export const InputComponent = ( { value, onChange }: { value: string; onChange: 
     };
 
     return (
-        <>
-            <h1>Ingrese a continuación:</h1>
+        <div className="input">
+            <h2>Ingrese a continuación:</h2>
             <form>
                 <input type="text" value={ value } onChange={ inputChange } />
             </form>
-        </>
+        </div>
     );
 };
 

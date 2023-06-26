@@ -14,9 +14,9 @@ export const FetchComponent = () =>
 
             const data = JSON.stringify( json );
 
-            const element = document.createElement( 'code' );
+            const div = document.getElementById( 'resp' );
 
-            document.body.append( element.textContent = data );
+            div?.append( data );
 
         }
         catch {
@@ -32,6 +32,10 @@ export const FetchComponent = () =>
 
     return (
         <>
-            <button onClick={ petition }>Petición</button></>
+            <button onClick={ petition }>Petición</button>
+            <code id="resp">
+
+            </code>
+        </>
     );
 };

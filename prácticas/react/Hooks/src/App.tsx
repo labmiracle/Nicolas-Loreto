@@ -1,5 +1,6 @@
 import './App.css';
 import { ChangeLetterComponent } from './components/ChangeLetterComponent';
+import { ReceiveComponent } from './components/ReceiveComponent';
 import { UnmountedComponent } from './components/UnmountedComponent';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <ChangeLetterComponent />
       <UnmountedComponent />
+      <ReceiveComponent url='/users' />
     </>
   );
 }

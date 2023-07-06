@@ -18,7 +18,7 @@ export const ChangeLetterComponent = () => {
 
   return (
     <>
-      <h1>Formulario controlado</h1>
+      <h1>Controlled form</h1>
 
       <form action=''>
         <input type='text' value={letter} onChange={(e) => hanldeLetter(e.target.value)} />

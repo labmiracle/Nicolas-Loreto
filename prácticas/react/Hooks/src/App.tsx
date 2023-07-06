@@ -2,6 +2,7 @@ import './App.css';
 import { ChangeLetterComponent } from './components/ChangeLetterComponent';
 import { ReceiveComponent } from './components/ReceiveComponent';
 import { UnmountedComponent } from './components/UnmountedComponent';
+import { UseEffectComponent } from './components/useEffectComponent';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <ChangeLetterComponent />
       <UnmountedComponent />
       <ReceiveComponent url='/users' />
+      <UseEffectComponent />
     </>
   );
 }

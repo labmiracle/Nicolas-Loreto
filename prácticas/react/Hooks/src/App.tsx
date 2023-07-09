@@ -2,7 +2,7 @@ import './App.css';
 import { ChangeLetterComponent } from './components/ChangeLetterComponent';
 import { ReceiveComponent } from './components/ReceiveComponent';
 import { UnmountedComponent } from './components/UnmountedComponent';
-import { UseEffectComponent } from './components/useEffectComponent';
+import { UseEffectComponent } from './/components/UseEffectComponent';
 
 function App() {
   return (

@@ -1,17 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useApi } from '../hooks/useApi';
 
 export const UseEffectComponent = () => {
-  useEffect(() => {
-    fetchApi();
-  }, []);
-
-  const fetchApi = async () => {
-    const data = await fetch('https://jsonplaceholder.typicode.com/todos');
-    const todos = await data.json();
-    setTodo(todos);
-  };
-
-  const [todo, setTodo]: any = useState([]);
+  const { todo } = useApi();
 
   return (
     <>

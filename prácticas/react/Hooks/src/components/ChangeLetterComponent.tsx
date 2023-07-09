@@ -1,19 +1,14 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 export const ChangeLetterComponent = () => {
-  const [letter, setletter]: any = useState('');
+  const [input, setinput] = useState('');
 
-  const hanldeLetter = (e: any) => {
-    if (e === 'a') {
-      setletter('b');
-    }
-    if (e === 'b') {
-      setletter('a');
-    } else {
-      setletter(e);
-    }
+  const [letter, setletter] = useState(input);
 
-    console.log(letter);
+  const hanldeLetter = (e: ChangeEvent<HTMLInputElement>) => {
+    setinput(e.target.value);
+    const letterReplaced = e.target.value.replace('a', 'b');
+    setletter(letterReplaced);
   };
 
   return (
@@ -21,8 +16,7 @@ export const ChangeLetterComponent = () => {
       <h1>Controlled form</h1>
 
       <form action=''>
-        <input type='text' value={letter} onChange={(e) => hanldeLetter(e.target.value)} />
-        {letter}
+        <input type='text' value={letter} onChange={(e) => hanldeLetter(e)} />
       </form>
     </>
   );

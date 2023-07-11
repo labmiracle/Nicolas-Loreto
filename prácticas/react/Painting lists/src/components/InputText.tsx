@@ -1,6 +1,12 @@
 import { AddTaskButton, RemoveTaskButton } from '.';
 
-export const InputText = ({ handleAdd, handleRemove }: any) => {
+export const InputText = ({
+  handleAdd,
+  handleRemove,
+}: {
+  handleAdd: React.FormEventHandler<HTMLFormElement>;
+  handleRemove: () => void;
+}) => {
   return (
     <>
       <h2>Add New Task</h2>

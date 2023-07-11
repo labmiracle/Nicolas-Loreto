@@ -1,4 +1,4 @@
-export const AddTaskButton = ({ submit }: any) => {
+export const AddTaskButton = ({ submit }: { submit: 'submit' }) => {
   return (
     <>
       <button type={submit}>Add</button>

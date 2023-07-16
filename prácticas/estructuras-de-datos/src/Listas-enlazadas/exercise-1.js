@@ -18,25 +18,26 @@ class LinkedList {
     console.log(`the current size of the LinkedList is ${this.size}`);
   }
   add(value) {
-    // create "node" object
-    let node = new Node(value);
-    // create current node
-    let current;
+    let node = new Node(value); // create "node" object
+
+    let current; // create current node
+
     // if this.head is null, node becomes this.head
+    // if this.head is not null, current becomes this.head
     if (!this.head) {
       this.head = node;
     } else {
-      // if this.head is not null, current becomes this.head
       current = this.head;
+
       // searching for the null value using while
       while (current.next) {
         current = current.next;
       }
-      // add value
-      current.next = node;
+
+      current.next = node; // add value
     }
-    // increment size
-    this.size++;
+
+    this.size++; // increment size
     console.log(`'${value}' has been added`);
   }
 
@@ -46,11 +47,9 @@ class LinkedList {
   }
 
   remove(value) {
-    // start by this.head
-    let current = this.head;
+    let current = this.head; // start by this.head
 
-    // if LinkedList is empty return
-    if (!current) return;
+    if (!current) return; // if LinkedList is empty return
 
     let previus;
 
@@ -61,7 +60,6 @@ class LinkedList {
     }
 
     // value not found
-
     if (!current) {
       console.log(`'${value}' is not found for remove`);
       return;
@@ -69,7 +67,6 @@ class LinkedList {
 
     // if previous is null then the first element is the value and this element is deleted
     // else the current is deleted
-
     if (!previus) {
       this.head = current.next;
     } else {
@@ -78,6 +75,8 @@ class LinkedList {
     this.size--;
     console.log(`'${value}' has been removed`);
   }
+
+  // find method
 
   find(value) {
     let current;
@@ -93,23 +92,36 @@ class LinkedList {
       console.log(`'${value}' found`);
     }
   }
+
+  // invert method
+
+  invert() {
+    let current = this.head;
+    let previous;
+    let next;
+
+    while (current) {
+      next = current.next; // save next value of current value
+      current.next = previous; // reference inverted to previous
+      previous = current; // previous is current value
+      current = next; // current value is the next
+    }
+
+    this.head = previous; // previous value is now the head
+
+    console.log(lista);
+  }
 }
 
 let lista = new LinkedList();
 
-lista.sizeCurrent();
-lista.add('hello world');
-lista.find('hello world');
-lista.add('this is a new node');
-lista.sizeCurrent();
-lista.remove('hello');
-lista.add('and another one');
-lista.sizeCurrent();
-lista.find('and another one');
-lista.find('hello world');
-lista.remove('hello world');
-lista.sizeCurrent();
-lista.remove('this is a new node');
-lista.sizeCurrent();
-
+lista.add('1');
+lista.add('2');
+lista.add('3');
+lista.add('4');
 console.log(lista);
+lista.sizeCurrent();
+lista.find('2');
+lista.remove('3');
+lista.sizeCurrent();
+lista.invert();

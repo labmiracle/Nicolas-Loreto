@@ -1,10 +1,10 @@
-interface Nodo {
+export interface NodoI {
   data: string;
   next: Nodo | null;
 }
 
 // class Node with data and next reference
-class Nodo implements Nodo {
+export class Nodo implements Nodo {
   data: string;
   next: Nodo | null;
   constructor(data: string, next: Nodo | null = null) {
@@ -14,7 +14,7 @@ class Nodo implements Nodo {
 }
 
 // class LinkedList
-class LinkedList {
+export class LinkedList {
   head: Nodo | null;
   size: number;
   constructor() {
@@ -25,11 +25,12 @@ class LinkedList {
   // size method
   sizeCurrent() {
     console.log(`the current size of the LinkedList is ${this.size}`);
+    return this.size;
   }
 
   // add method
-  add(value: string) {
-    const nodo: Nodo = new Nodo(value); // create "node" object
+  add(value: any) {
+    const nodo: Nodo = new Nodo(value); // create "nodo" object
 
     let current; // create current node
 
@@ -120,20 +121,18 @@ class LinkedList {
     }
 
     this.head = previous; // previous value is now the head
-
-    console.log(lista);
   }
 }
 
-let lista = new LinkedList();
+let list = new LinkedList();
 
-lista.add('1');
-lista.add('2');
-lista.add('3');
-lista.add('4');
-console.log(lista);
-lista.sizeCurrent();
-lista.find('2');
-lista.remove('3');
-lista.sizeCurrent();
-lista.invert();
+list.add('1');
+list.add('2');
+list.add('3');
+list.add('4');
+console.log(list);
+list.sizeCurrent();
+list.find('2');
+list.remove('3');
+list.sizeCurrent();
+list.invert();

@@ -64,11 +64,11 @@ export class LinkedList {
 
     if (!current) return; // if LinkedList is empty return
 
-    let previus: Nodo | null = null;
+    let previous: Nodo | null = null;
 
     // advance for the list
     while (current && current.data != value) {
-      previus = current;
+      previous = current;
       current = current.next;
     }
 
@@ -80,10 +80,10 @@ export class LinkedList {
 
     // if previous is null then the first element is the value and this element is deleted
     // else the current is deleted
-    if (!previus) {
+    if (!previous) {
       this.head = current.next;
     } else {
-      previus.next = current.next;
+      previous.next = current.next;
     }
     this.size--;
     console.log(`'${value}' has been removed`);
@@ -122,17 +122,40 @@ export class LinkedList {
 
     this.head = previous; // previous value is now the head
   }
+
+  // deleteDups method
+
+  deleteDups() {
+    const uniqueValues: Set<string> = new Set(); // new set for unique values
+
+    let current: Nodo | null = this.head;
+    let previous: Nodo | null = null;
+
+    if (!this.head) {
+      console.log('empty list');
+      return;
+    }
+
+    while (current) {
+      if (uniqueValues.has(current.data)) {
+        // if current data exists in the set
+        previous!.next = current.next; // change the reference to the following of the repeated
+        this.size--; // size decrement
+      } else {
+        uniqueValues.add(current.data); // if not exist add current.data to Set
+        previous = current; // reference to the previous value
+      }
+      current = current.next; // cuurent is the current next
+    }
+  }
 }
 
 let list = new LinkedList();
 
 list.add('1');
-list.add('2');
 list.add('3');
+list.add('1');
 list.add('4');
+
+list.deleteDups();
 console.log(list);
-list.sizeCurrent();
-list.find('2');
-list.remove('3');
-list.sizeCurrent();
-list.invert();

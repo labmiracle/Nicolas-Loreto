@@ -6,6 +6,7 @@ export class Stack {
   }
 
   pop() {
+    if (this.arr.length === 0) return 'empty stack';
     this.arr.pop();
   }
 
@@ -14,12 +15,13 @@ export class Stack {
   }
 
   showStack() {
-    console.log(this.arr);
+    return this.arr;
   }
 }
 
 let newStack = new Stack();
 
 newStack.push('hello');
+newStack.push('Mike');
 newStack.size();
 newStack.showStack();

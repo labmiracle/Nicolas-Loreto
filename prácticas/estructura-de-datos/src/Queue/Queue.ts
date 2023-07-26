@@ -1,7 +1,7 @@
 export class Queue {
-  constructor() {}
+  constructor(protected arr: string[] = []) {}
 
-  arr: string[] = []; // create empty array
+  // create empty array
 
   // method for add at the end
   enqueue(value: any) {
@@ -14,9 +14,8 @@ export class Queue {
     this.arr.shift();
   }
 
-  // method for show and return the size of the queue
+  // method for return the size of the queue
   size() {
-    console.log(this.arr.length);
     return this.arr.length;
   }
 }

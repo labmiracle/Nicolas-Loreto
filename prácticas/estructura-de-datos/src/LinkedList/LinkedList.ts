@@ -1,13 +1,13 @@
 export interface INodo {
   data: string;
-  next: Nodo | null;
+  next: INodo | null;
 }
 
 // class Node with data and next reference
 export class Nodo implements INodo {
   data: string;
   next: Nodo | null;
-  constructor(data: string, next: Nodo | null = null) {
+  constructor(data: string, next: INodo | null = null) {
     this.data = data;
     this.next = next;
   }
@@ -15,7 +15,7 @@ export class Nodo implements INodo {
 
 // class LinkedList
 export class LinkedList {
-  head: Nodo | null;
+  head: INodo | null;
   size: number;
   constructor() {
     this.head = null;
@@ -30,16 +30,14 @@ export class LinkedList {
 
   // add method
   add(value: any) {
-    const nodo: Nodo = new Nodo(value); // create "nodo" object
-
-    let current; // create current node
+    const nodo: INodo = new Nodo(value); // create "nodo" object
 
     // if this.head is null, node becomes this.head
     // if this.head is not null, current becomes this.head
     if (!this.head) {
       this.head = nodo;
     } else {
-      let current: Nodo = this.head;
+      let current: INodo = this.head;
 
       // searching for the null value using while
       while (current.next) {
@@ -60,11 +58,11 @@ export class LinkedList {
 
   // remove method
   remove(value: string) {
-    let current: Nodo | null = this.head; // start by this.head
+    let current: INodo | null = this.head; // start by this.head
 
     if (!current) return; // if LinkedList is empty return
 
-    let previous: Nodo | null = null;
+    let previous: INodo | null = null;
 
     // advance for the list
     while (current && current.data != value) {
@@ -109,9 +107,9 @@ export class LinkedList {
   // invert method
 
   invert() {
-    let current: Nodo | null = this.head;
-    let previous: Nodo | null = null;
-    let next: Nodo | null = null;
+    let current: INodo | null = this.head;
+    let previous: INodo | null = null;
+    let next: INodo | null = null;
 
     while (current) {
       next = current.next; // save next value of current value
@@ -128,8 +126,8 @@ export class LinkedList {
   deleteDups() {
     const uniqueValues: Set<string> = new Set(); // new set for unique values
 
-    let current: Nodo | null = this.head;
-    let previous: Nodo | null = null;
+    let current: INodo | null = this.head;
+    let previous: INodo | null = null;
 
     if (!this.head) {
       console.log('empty list');

@@ -1,7 +1,7 @@
 import { LinkedList } from './LinkedList';
-import { Nodo, NodoI } from './LinkedList';
+import { Nodo, INodo } from './LinkedList';
 
-interface NodoDoubleRefI extends NodoI {
+interface NodoDoubleRefI extends INodo {
   prev: string | null;
 }
 

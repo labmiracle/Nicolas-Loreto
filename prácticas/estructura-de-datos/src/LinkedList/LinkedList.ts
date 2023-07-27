@@ -1,10 +1,10 @@
-export interface NodoI {
+export interface INodo {
   data: string;
   next: Nodo | null;
 }
 
 // class Node with data and next reference
-export class Nodo implements Nodo {
+export class Nodo implements INodo {
   data: string;
   next: Nodo | null;
   constructor(data: string, next: Nodo | null = null) {

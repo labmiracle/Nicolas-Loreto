@@ -62,6 +62,31 @@ export class Tree {
   sizeCurrent() {
     return this.size;
   }
+
+  maxValue() {
+    if (!this.root) {
+      return 'empty tree'; // the tree is empty
+    }
+
+    let max: number | null = this.root.data!; // max value
+    const newSet: Set<number> = new Set(); // created new Set
+
+    while (this.root) {
+      // add to set the root node on the right, because here are the max values
+      newSet.add(this.root.data!);
+      this.root = this.root.right;
+    }
+
+    const arr: number[] = [...newSet]; // converted set to array
+
+    for (let i = 0; i < arr.length; i++) {
+      while (max < arr[i]) {
+        // while max value is minor than array element, max value is array element
+        max = arr[i];
+      }
+    }
+    return max; // return the max value
+  }
 }
 
 let n = new Tree();
@@ -74,3 +99,4 @@ n.add(50);
 n.add(90);
 console.log(n.sizeCurrent());
 console.log(n);
+n.maxValue();

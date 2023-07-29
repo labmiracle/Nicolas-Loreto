@@ -1,0 +1,179 @@
+{
+  "info": {
+    "_postman_id": "b588461c-848d-4321-8332-8f0527d63f49",
+    "name": "Practice-Miracle-Lab",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "28224475"
+  },
+  "item": [
+    {
+      "name": "Check health",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Respuesta exitosa!\", function() {\r",
+              "pm.response.to.have.status(200);\r",
+              "});\r",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/zen",
+          "host": ["{{url}}"],
+          "path": ["zen"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get user public",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/users/{{username}}",
+          "host": ["{{url}}"],
+          "path": ["users", "{{username}}"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create a repo",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "**********************",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"name\": \"MiracleLab API Repo\",\r\n\"private\": true,\r\n\"auto_init\": true\r\n}\r\n"
+        },
+        "url": {
+          "raw": "{{url}}/user/repos",
+          "host": ["{{url}}"],
+          "path": ["user", "repos"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create an issue",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "**********************",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"title\": \"New logo\",\r\n\"body\": \"We should have one\",\r\n\"labels\": []\r\n}"
+        },
+        "url": {
+          "raw": "{{url}}/repos/:owner/:repo/issues",
+          "host": ["{{url}}"],
+          "path": ["repos", ":owner", ":repo", "issues"],
+          "variable": [
+            {
+              "key": "owner",
+              "value": "NicoLoreto"
+            },
+            {
+              "key": "repo",
+              "value": "MiracleLab-API-Repo"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete repo",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "**********************",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "{{url}}/repos/:owner/:repo",
+          "host": ["{{url}}"],
+          "path": ["repos", ":owner", ":repo"],
+          "variable": [
+            {
+              "key": "owner",
+              "value": "NicoLoreto"
+            },
+            {
+              "key": "repo",
+              "value": "MiracleLab-API-Repo"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "https://api.github.com",
+      "type": "string"
+    },
+    {
+      "key": "username",
+      "value": "NicoLoreto",
+      "type": "string"
+    }
+  ]
+}

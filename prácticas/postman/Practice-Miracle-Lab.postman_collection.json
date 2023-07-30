@@ -47,6 +47,29 @@
       "response": []
     },
     {
+      "name": "Get user private",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/user",
+          "host": ["{{url}}"],
+          "path": ["user"]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "Create a repo",
       "request": {
         "auth": {
@@ -54,7 +77,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "**********************",
+              "value": "",
               "type": "string"
             }
           ]
@@ -81,7 +104,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "**********************",
+              "value": "",
               "type": "string"
             }
           ]
@@ -118,7 +141,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "**********************",
+              "value": "",
               "type": "string"
             }
           ]

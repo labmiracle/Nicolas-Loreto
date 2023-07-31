@@ -5,17 +5,18 @@ const ip = process.env.IP || 'localhost';
 
 http
   .createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'html' });
-    // show complete request
-    // console.log(req);
+    try {
+      res.writeHead(200, { 'Content-Type': 'html' });
+      // show complete request
+      // console.log(req);
 
-    // show current url
-    // console.log(req.url);
+      // show current url
+      // console.log(req.url);
 
-    // html with req.url
+      // html with req.url
 
-    if (req.url === '/miracle') {
-      let html = `
+      if (req.url === '/miracle') {
+        let html = `
     
       <!DOCTYPE html>
       <html lang="en">
@@ -31,9 +32,9 @@ http
       </body>
       </html>`;
 
-      res.end(html);
-    } else if (req.url === '/about') {
-      let html = `
+        res.end(html);
+      } else if (req.url === '/about') {
+        let html = `
     
       <!DOCTYPE html>
       <html lang="en">
@@ -49,9 +50,9 @@ http
       </body>
       </html>`;
 
-      res.end(html);
-    } else if (req.url === '/') {
-      let html = `
+        res.end(html);
+      } else if (req.url === '/') {
+        let html = `
     
       <!DOCTYPE html>
       <html lang="en">
@@ -72,16 +73,17 @@ http
   
       <li>
           <a href='http://localhost:3000/about'>
-            http://localhost:3000/about
+              http://localhost:3000/about
           </a>
         </li>
     </ul>  
       </body>
       </html>`;
 
-      res.end(html);
-    } else {
-      let html = `
+        res.end(html);
+      } else {
+        res.writeHead(404, { 'Content-type': 'html' });
+        let html = `
     
       <!DOCTYPE html>
       <html lang="en">
@@ -94,10 +96,13 @@ http
       <span>The current url is: ${req.url}<span>  
       <h2>Error page</h2>
       <h3>404</h3>
+      <h4>File not found</h4>
       </body>
       </html>`;
-
-      res.end(html);
+        res.end(html);
+      }
+    } catch (error) {
+      throw Error(error);
     }
   })
 

@@ -4,13 +4,14 @@ const ip = process.env.IP || 'localhost';
 
 const url = ip + ':' + port;
 
+const server = ' http://' + ip + ':' + port;
+
 const http = require('http');
 
 http
   .createServer((req, res) => {
     if (req.url === '/' && req.method === 'GET') {
       res.writeHead(200, { 'Content-type': 'text/html' });
-      console.log(url);
 
       let html = `   
   <!DOCTYPE html>
@@ -151,4 +152,4 @@ http
 
   .listen(port, ip);
 
-console.log('listening on port', port);
+console.log('server started on', server);

@@ -2,6 +2,7 @@ const http = require('http');
 
 let port = process.env.PORT || 3000;
 const ip = process.env.IP || 'localhost';
+const server = ' http://' + ip + ':' + port;
 
 http
   .createServer((req, res) => {
@@ -66,14 +67,14 @@ http
       <h2>Available urls:</h2>
       <ul>
         <li>
-            <a href='http://localhost:3000/miracle'>
-              http://localhost:3000/miracle
+            <a href='${server}/miracle'>
+              ${server}/miracle
             </a>
           </li>
   
       <li>
-          <a href='http://localhost:3000/about'>
-              http://localhost:3000/about
+          <a href='${server}/about'>
+              ${server}/about
           </a>
         </li>
     </ul>  
@@ -108,4 +109,4 @@ http
 
   .listen(port, ip);
 
-console.log('server started on', ' http://' + ip + ':' + port);
+console.log('server started on', server);

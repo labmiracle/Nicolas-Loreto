@@ -10,7 +10,7 @@ const request = async (magnitud) => {
 
     arr.map((m) => {
       const mag = m.properties.mag;
-      if (mag >= magnitud) {
+      if (mag === magnitud) {
         const dateEarthquakes = m.properties.time;
         const object = {
           title: data.metadata.title,
@@ -55,4 +55,8 @@ const request = async (magnitud) => {
   }
 };
 
-request(1.5);
+request(1);
+request(1.1);
+request(1.2);
+request(1.3);
+request(1.4);

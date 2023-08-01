@@ -6,23 +6,48 @@ const request = async (magnitud) => {
 
     const arr = data.features;
 
+    const date = data.metadata.generated;
+
     arr.map((m) => {
       const mag = m.properties.mag;
       if (mag >= magnitud) {
+        const dateEarthquakes = m.properties.time;
         const object = {
           title: data.metadata.title,
-          total: data.metadata.count,
+          count: data.metadata.count,
           status: data.metadata.status,
           title_earthquakes: m.properties.title,
-          date: '',
-          time: '',
+          date: new Date(date),
+          date_earthquakes: new Date(dateEarthquakes),
           mag: mag,
           status_earthquakes: m.properties.status,
           type: m.properties.type,
           place_earthquakes: m.properties.place,
-          coordinate: m.geometry.coordinates[0],
+          coordinate: m.geometry.coordinates,
+          info: m.properties.url,
+          detail: m.properties.detail,
         };
-        console.log(object);
+        const show = `
+      *****************************
+      ${object.title}        
+        ---------------------
+      total : ${object.count}
+      status: ${object.status}
+        ---------------------
+      ${object.date}
+      ==============================
+      ${object.title_earthquakes} 
+      ${object.date_earthquakes}
+      Magnitud: ${object.mag}
+      Estatus:  ${object.status_earthquakes}
+      Tipo:  ${object.type}
+      Lugar:  ${object.place_earthquakes}
+      Coordenadas:  ${object.coordinate}
+      Info:  ${object.info}
+      Detalles:  ${object.detail}
+      ==============================
+      `;
+        console.log(show);
       }
     });
   } catch (error) {
@@ -30,4 +55,4 @@ const request = async (magnitud) => {
   }
 };
 
-request(0.5);
+request(1.5);

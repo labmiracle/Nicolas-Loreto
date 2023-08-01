@@ -6,7 +6,7 @@ const ip = process.env.IP || 'localhost';
 http
   .createServer((req, res) => {
     try {
-      res.writeHead(200, { 'Content-Type': 'html' });
+      res.writeHead(200, { 'Content-Type': 'text/html' });
       // show complete request
       // console.log(req);
 

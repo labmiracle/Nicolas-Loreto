@@ -108,4 +108,4 @@ http
 
   .listen(port, ip);
 
-console.log('server started on ', port);
+console.log('server started on', ' http://' + ip + ':' + port);

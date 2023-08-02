@@ -29,7 +29,7 @@ const request = async (magnitud) => {
           info: m.properties.url,
           detail: m.properties.detail,
         };
-        const show = `
+        const template = `
       *****************************
       ${object.title}        
         ---------------------
@@ -49,7 +49,7 @@ const request = async (magnitud) => {
       Detalles:  ${object.detail}
       ==============================
       `;
-        console.log(show);
+        console.log(template);
       }
     });
   } catch (error) {

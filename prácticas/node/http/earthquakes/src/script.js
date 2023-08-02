@@ -1,5 +1,5 @@
-const request = async (magnitud) => {
-  if (!magnitud || typeof magnitud != 'number') {
+const request = async (magnitude) => {
+  if (!magnitude || typeof magnitude != 'number') {
     process.exit(); // finish execution
   }
   try {
@@ -12,7 +12,7 @@ const request = async (magnitud) => {
 
     arr.map((m) => {
       const mag = m.properties.mag; // save magnitude
-      if (mag === magnitud) {
+      if (mag === magnitude) {
         const dateEarthquakes = m.properties.time; //save the date of each earthquake
         const object = {
           title: data.metadata.title,
@@ -41,12 +41,12 @@ const request = async (magnitud) => {
       ${object.title_earthquakes} 
       ${object.date_earthquakes}
       Magnitud: ${object.mag}
-      Estatus:  ${object.status_earthquakes}
-      Tipo:  ${object.type}
-      Lugar:  ${object.place_earthquakes}
-      Coordenadas:  ${object.coordinate}
-      Info:  ${object.info}
-      Detalles:  ${object.detail}
+      Estatus: ${object.status_earthquakes}
+      Tipo: ${object.type}
+      Lugar: ${object.place_earthquakes}
+      Coordenadas: ${object.coordinate}
+      Info: ${object.info}
+      Detalles: ${object.detail}
       ==============================
       `;
         console.log(template);

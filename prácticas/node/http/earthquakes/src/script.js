@@ -1,17 +1,19 @@
 const request = async (magnitud) => {
-  if (!magnitud || typeof magnitud != 'number') return;
+  if (!magnitud || typeof magnitud != 'number') {
+    process.exit(); // finish execution
+  }
   try {
     const response = await fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson');
     const data = await response.json();
 
-    const arr = data.features;
+    const arr = data.features; // save array to variable
 
-    const date = data.metadata.generated;
+    const date = data.metadata.generated; // save date generated
 
     arr.map((m) => {
-      const mag = m.properties.mag;
+      const mag = m.properties.mag; // save magnitude
       if (mag === magnitud) {
-        const dateEarthquakes = m.properties.time;
+        const dateEarthquakes = m.properties.time; //save the date of each earthquake
         const object = {
           title: data.metadata.title,
           count: data.metadata.count,
@@ -55,8 +57,9 @@ const request = async (magnitud) => {
   }
 };
 
-request(1);
 request(1.1);
 request(1.2);
 request(1.3);
 request(1.4);
+request(1.5);
+request(1.6);

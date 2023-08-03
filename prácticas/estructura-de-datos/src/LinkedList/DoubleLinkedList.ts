@@ -14,7 +14,7 @@ class NodoDoubleRef extends Nodo {
 
 class DoubleLinkedList extends LinkedList {
   add(value: string) {
-    let nodo = new NodoDoubleRef(value) as any;
+    const nodo = new NodoDoubleRef(value) as any;
 
     if (!this.head) {
       this.head = nodo;
@@ -33,7 +33,7 @@ class DoubleLinkedList extends LinkedList {
   }
 }
 
-let list = new DoubleLinkedList();
+const list = new DoubleLinkedList();
 
-list.add('hola');
+list.add('Hi!');
 console.log(list);

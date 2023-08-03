@@ -7,7 +7,7 @@ export class QueueGame extends Queue {
   game() {
     while (this.size() != 1) {
       // if the size of the queue is one there is a winner
-      let num = Math.floor(Math.random() * this.size()); // pass the potato randomly
+      const num = Math.floor(Math.random() * this.size()); // pass the potato randomly
       this.arr.splice(num, 1); // delete of the queue
     }
 
@@ -16,7 +16,7 @@ export class QueueGame extends Queue {
   }
 }
 
-let game = new QueueGame([
+const game = new QueueGame([
   'Sofía',
   'Mateo',
   'Valentina',

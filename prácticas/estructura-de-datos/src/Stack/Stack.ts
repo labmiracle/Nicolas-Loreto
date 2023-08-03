@@ -19,7 +19,7 @@ export class Stack {
   }
 }
 
-let newStack = new Stack();
+const newStack = new Stack();
 
 newStack.push('hello');
 newStack.push('Mike');

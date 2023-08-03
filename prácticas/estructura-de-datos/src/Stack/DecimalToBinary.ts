@@ -32,10 +32,13 @@ export class ConvertDecimal extends Stack {
         decimalPart -= Math.floor(decimalPart);
       }
     }
-
     return this.arr.join('');
   }
 }
+
+const newObject = new ConvertDecimal();
+
+newObject.convert(5094);
 
 // Binary
 

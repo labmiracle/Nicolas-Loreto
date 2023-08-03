@@ -143,7 +143,7 @@ export class LinkedList {
         uniqueValues.add(current.data); // if not exist add current.data to Set
         previous = current; // reference to the previous value
       }
-      current = current.next; // cuurent is the current next
+      current = current.next; // current is the current next
     }
   }
 }

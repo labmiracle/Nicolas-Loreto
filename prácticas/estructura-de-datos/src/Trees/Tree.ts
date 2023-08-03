@@ -5,7 +5,11 @@ export interface INode {
 }
 
 export class Node implements INode {
-  constructor(data: number | null, left: INode | null = null, right: INode | null = null) {
+  constructor(
+    data: number | null,
+    left: INode | null = null,
+    right: INode | null = null
+  ) {
     this.data = data;
     this.left = left;
     this.right = right;
@@ -58,7 +62,7 @@ export class Tree {
     }
   }
 
-  // mehod for count nodes
+  // method for count nodes
   sizeCurrent() {
     return this.size;
   }
@@ -89,7 +93,7 @@ export class Tree {
   }
 }
 
-let n = new Tree();
+const n = new Tree();
 n.add(60);
 n.add(80);
 n.add(20);

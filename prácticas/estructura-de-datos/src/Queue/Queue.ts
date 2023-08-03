@@ -20,7 +20,7 @@ export class Queue {
   }
 }
 
-let newQueue = new Queue();
+const newQueue = new Queue();
 newQueue.enqueue('hello');
 newQueue.enqueue('your name');
 newQueue.enqueue('value3');

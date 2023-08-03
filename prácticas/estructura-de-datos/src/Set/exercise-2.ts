@@ -2,7 +2,7 @@ const arr1 = [1, 1, 1, 1, 1, 2, 3, 4, 5, 5];
 
 const arr2 = [1, 1, 10, 2, 10, 7, 4, 8, 5, 10, 10, 10, 24];
 
-const elementNoRepeat = (arr1: Number[], arr2: Number[]) => {
+const elementNoRepeat = (arr1: number[], arr2: number[]) => {
   const set1 = new Set(arr1);
 
   const set2 = new Set(arr2);

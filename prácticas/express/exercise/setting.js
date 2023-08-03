@@ -1,5 +1,5 @@
 const serverConfig = {
-  port: 5000,
+  port: 4567,
   ip: 'localhost',
 };
 

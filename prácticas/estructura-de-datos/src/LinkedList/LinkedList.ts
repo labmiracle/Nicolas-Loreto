@@ -29,7 +29,7 @@ export class LinkedList {
   }
 
   // add method
-  add(value: any) {
+  add(value: string) {
     const nodo: INodo = new Nodo(value); // create "nodo" object
 
     // if this.head is null, node becomes this.head
@@ -148,7 +148,7 @@ export class LinkedList {
   }
 }
 
-let list = new LinkedList();
+const list = new LinkedList();
 
 list.add('1');
 list.add('3');

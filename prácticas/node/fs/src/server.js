@@ -1,9 +1,10 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const serverSetting = require('../setting');
 
-const port = process.env.PORT | 5000;
-const ip = process.env.IP | 'localhost';
+const port = process.env.PORT | serverSetting.port;
+const ip = process.env.IP | serverSetting.ip;
 
 http
   .createServer((req, res) => {

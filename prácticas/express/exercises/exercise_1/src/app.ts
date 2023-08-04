@@ -1,14 +1,15 @@
-const express = require('express');
-const serverConfig = require('../setting');
+import express from 'express';
+import { serviceConfig } from './settings';
+
 const app = express();
 
-const port = process.env.PORT | serverConfig.port;
+const port = process.env.PORT || serviceConfig.port;
 
 app.use(express.json());
 
 // middleware function
 
-const register = (req, res, next) => {
+const register = (req: { url: string }, res: unknown, next: () => void) => {
   console.log(req.url);
   next();
 };
@@ -18,11 +19,11 @@ app.use(register);
 app.use(express.static('src/public'));
 
 app.get('/', (req, res) => {
-  res.end('Hi from the server');
+  return res.end('Hi from the server');
 });
 
 app.get('/yo', (req, res) => {
-  res.end(`Hi`);
+  return res.end(`Hi`);
 });
 
 app.listen(port, () => {

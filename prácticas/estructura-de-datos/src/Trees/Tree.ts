@@ -141,4 +141,5 @@ n.previousOrder(n.root);
 // tree transversal in post order
 n.postOrder(n.root);
 
+// take the max value
 n.maxValue();

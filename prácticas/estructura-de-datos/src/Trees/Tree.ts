@@ -64,6 +64,7 @@ export class Tree {
 
   // method for count nodes
   sizeCurrent() {
+    console.log('The current size is', this.size);
     return this.size;
   }
 
@@ -90,6 +91,7 @@ export class Tree {
         max = arr[i];
       }
     }
+    console.log('The maximum value in the tree is', max);
     return max; // return the max value
   }
 
@@ -116,6 +118,7 @@ export class Tree {
         min = arr[i];
       }
     }
+    console.log('The minimum value in the tree is', min);
     return min; // return the min value
   }
 
@@ -156,14 +159,14 @@ n.add(10);
 n.add(50);
 n.add(90);
 
+// current size
+n.sizeCurrent();
+
 // take the max value
 n.maxValue();
 
 // take the min value
 n.minValue();
-
-// current size
-console.log(n.sizeCurrent());
 
 // tree traversal in order
 n.order(n.root);

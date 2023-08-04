@@ -68,28 +68,55 @@ export class Tree {
   }
 
   maxValue() {
-    if (!this.root) {
+    let current = this.root;
+    if (!current) {
       return 'empty tree'; // the tree is empty
     }
 
-    let max: number | null = this.root.data!; // max value
+    let max: number | null = current.data!; // max value
     const newSet: Set<number> = new Set(); // created new Set
 
-    while (this.root) {
+    while (current) {
       // add to set the root node on the right, because here are the max values
-      newSet.add(this.root.data!);
-      this.root = this.root.right;
+      newSet.add(current.data!);
+      current = current.right;
     }
 
     const arr: number[] = [...newSet]; // converted set to array
 
     for (let i = 0; i < arr.length; i++) {
       while (max < arr[i]) {
-        // while max value is minor than array element, max value is array element
+        // while max value is minor than element of array, max value is this element
         max = arr[i];
       }
     }
     return max; // return the max value
+  }
+
+  minValue() {
+    let current = this.root;
+    if (!current) {
+      return 'empty tree'; // the tree is empty
+    }
+
+    let min: number | null = current.data!; // min value
+    const newSet: Set<number> = new Set(); // created new Set
+
+    while (current) {
+      // add to set the root node on the left, because here are the min values
+      newSet.add(current.data!);
+      current = current.left;
+    }
+
+    const arr: number[] = [...newSet]; // converted set to array
+
+    for (let i = 0; i < arr.length; i++) {
+      while (min > arr[i]) {
+        // while min value is greater than element of array, min value is this element
+        min = arr[i];
+      }
+    }
+    return min; // return the min value
   }
 
   order(node: INode | null) {

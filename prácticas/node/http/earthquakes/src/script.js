@@ -3,7 +3,9 @@ const request = async (magnitude) => {
     process.exit(); // finish execution
   }
   try {
-    const response = await fetch('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson');
+    const response = await fetch(
+      'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson'
+    );
     const data = await response.json();
 
     const arr = data.features; // save array to variable

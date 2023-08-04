@@ -156,6 +156,12 @@ n.add(10);
 n.add(50);
 n.add(90);
 
+// take the max value
+n.maxValue();
+
+// take the min value
+n.minValue();
+
 // current size
 console.log(n.sizeCurrent());
 
@@ -167,6 +173,3 @@ n.previousOrder(n.root);
 
 // tree transversal in post order
 n.postOrder(n.root);
-
-// take the max value
-n.maxValue();

@@ -91,9 +91,36 @@ export class Tree {
     }
     return max; // return the max value
   }
+
+  order(node: INode | null) {
+    if (node != null) {
+      this.order(node.left); // start to left
+      console.log(node.data); // take a value
+      this.order(node.right); // continue to the right
+    }
+  }
+
+  previousOrder(node: INode | null) {
+    if (node != null) {
+      console.log(node.data); // take the value
+      this.previousOrder(node.left); // continue to the left
+      this.previousOrder(node.right); // continue to the right
+    }
+  }
+
+  postOrder(node: INode | null) {
+    if (node != null) {
+      this.postOrder(node.left); // start to left
+      this.postOrder(node.right); // continue to the right
+      console.log(node.data); // take the value
+    }
+  }
 }
 
+// new tree
 const n = new Tree();
+
+// add values
 n.add(60);
 n.add(80);
 n.add(20);
@@ -101,6 +128,17 @@ n.add(30);
 n.add(10);
 n.add(50);
 n.add(90);
+
+// current size
 console.log(n.sizeCurrent());
-console.log(n);
+
+// tree traversal in order
+n.order(n.root);
+
+// tree transversal in previous order
+n.previousOrder(n.root);
+
+// tree transversal in post order
+n.postOrder(n.root);
+
 n.maxValue();
